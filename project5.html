@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXUARY BEDROOM - DETAILS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+<!-- Magnific Popup JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <style>
+        /* Inline CSS or link to an external stylesheet */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .header h1 {
+            color: #4070f4;
+        }
+        .project-details {
+            margin-bottom: 2rem;
+        }
+        .project-details img {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 0.5rem;
+        }
+        .back-link {
+            display: block;
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        /* Magnific Popup arrow styles */
+.mfp-arrow {
+    color: #fff; /* White color for the arrows */
+    font-size: 2rem; /* Increase size of the arrows */
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    border-radius: 50%; /* Make the arrows round */
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background 0.3s ease;
+}
+
+.mfp-arrow-left {
+    left: -10px; /* Position the left arrow */
+}
+
+.mfp-arrow-right {
+    right: 30px; /* Position the right arrow */
+}
+    </style>
+    <script>
+        $(document).ready(function() {
+            $('.gallery').magnificPopup({
+                delegate: 'a', // child items selector, by clicking on it popup will open
+                type: 'image',
+                gallery: {
+                    enabled: true, // enables gallery mode
+                    navigateByImgClick: true, // allows navigation by clicking the image
+                    arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup for arrows
+                    tPrev: 'Previous', // title for left button
+                    tNext: 'Next', // title for right button
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>BEDROOM DESIGNS</h1>
+        </div>
+
+        <div class="project-details">
+            <img src="BEDROOM 3/R 1.png" alt="Main Screenshot of Project 1">
+            <h2>Project Overview</h2>
+            <p>Stylish and functional layouts featuring innovative decor, 
+                furniture arrangements, and color schemes for creating personalized and 
+                comfortable sleeping spaces.</p>
+        </div>
+
+        <div class="gallery">
+            <a href="BEDROOM 3/R 2.png" class="gallery-item">
+                <img src="BEDROOM 3/R 2.png" alt="Detailed Screenshot 1">
+            </a>
+            <a href="BEDROOM 3/R 3.png" class="gallery-item">
+                <img src="BEDROOM 3/R 3.png" alt="Detailed Screenshot 2">
+            </a>
+            <a href="BEDROOM 3/R 4.png" class="gallery-item">
+                <img src="BEDROOM 3/R 4.png" alt="Detailed Screenshot 3">
+            </a>
+            <a href="BEDROOM 3/R 5.png" class="gallery-item">
+                <img src="BEDROOM 3/R 5.png" alt="Detailed Screenshot 3">
+            </a>
+            <a href="BEDROOM 3/001.png" class="gallery-item">
+                <img src="BEDROOM 3/001.png" alt="Detailed Screenshot 3">
+            </a>
+            <a href="BEDROOM 3/002.png" class="gallery-item">
+                <img src="BEDROOM 3/002.png" alt="Detailed Screenshot 3">
+            </a>
+            <a href="BEDROOM 3/003.png" class="gallery-item">
+                <img src="BEDROOM 3/003.png" alt="Detailed Screenshot 3">
+            </a>
+            <a href="BEDROOM 3/Image10.png" class="gallery-item">
+                <img src="BEDROOM 3/Image10.png" alt="Detailed Screenshot 3">
+            </a>
+            <a href="BEDROOM 3/Image12.png" class="gallery-item">
+                <img src="BEDROOM 3/Image12.png" alt="Detailed Screenshot 3">
+            </a>
+            <!-- Add more images as needed -->
+        </div>
+        
+        <div class="back-link">
+            <a href="index.html">Back to Projects</a>
+        </div>
+    </div>
+</body>
+</html>
