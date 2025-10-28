@@ -3,145 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GYM SPACE - DETAILS</title>
-     <!-- Magnific Popup CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <title>Project: Multi Gym - Zahra Interiors</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Magnific Popup JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
     <style>
-        /* Inline CSS or link to an external stylesheet */
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
+        /* Custom styles for the project detail page.
+          These build ON TOP of styles.css
+        */
+
+        /* Force the header to be in the "scrolled" state on this page */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
         }
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 2rem;
+        header .logo img {
+             filter: brightness(0) invert(0); /* black */
         }
-        .header {
-            text-align: center;
-            margin-bottom: 2rem;
+        header .desktop-nav a {
+            color: #2C2C2C;
         }
-        .header h1 {
-            color: #4070f4;
+        header .mobile-menu-btn span {
+            background: #2C2C2C;
         }
-        .project-details {
-            margin-bottom: 2rem;
+        
+        /* Main section padding to clear the fixed header */
+        .project-detail-section {
+            padding: 160px 0 96px; /* 96px default + extra for header */
+            background: #FFFFFF; 
         }
-        .project-details img {
+
+        /* Project Overview Layout */
+        .project-overview-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column on mobile */
+            gap: 32px;
+            align-items: flex-start;
+            margin-bottom: 64px;
+        }
+
+        .project-overview-grid img {
             width: 100%;
             height: auto;
-            border-radius: 0.5rem;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
+
+        .project-description h3 {
+             font-size: clamp(24px, 4vw, 36px);
+             margin-bottom: 16px;
+             /* Font family is already set by styles.css */
         }
-        .gallery img {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 0.5rem;
+        
+        .project-description p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #555;
         }
-        .back-link {
+
+        /* On desktop, use 2 columns and make text sticky */
+        @media (min-width: 992px) {
+            .project-overview-grid {
+                grid-template-columns: 1.5fr 1fr; /* Make image larger */
+                gap: 48px;
+            }
+            .project-description {
+                position: sticky; /* Make description sticky on scroll */
+                top: 140px; /* 96px header + 44px padding */
+            }
+        }
+
+        /* Gallery Grid Styling */
+        .project-gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 32px;
+            margin-bottom: 64px;
+        }
+
+        .project-gallery-grid a {
             display: block;
-            margin-top: 2rem;
-            text-align: center;
-            font-size: 1.2rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
-        /* Magnific Popup arrow styles */
-.mfp-arrow {
-    color: #fff; /* White color for the arrows */
-    font-size: 2rem; /* Increase size of the arrows */
-    line-height: 50px;
-    width: 50px;
-    height: 50px;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
-    border-radius: 50%; /* Make the arrows round */
-    top: 50%;
-    transform: translateY(-50%);
-    transition: background 0.3s ease;
-}
+        
+        .project-gallery-grid a:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
 
-.mfp-arrow-left {
-    left: -10px; /* Position the left arrow */
-}
+        .project-gallery-grid img {
+            width: 100%;
+            height: 250px; /* Fixed height for a uniform grid */
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
 
-.mfp-arrow-right {
-    right: 30px; /* Position the right arrow */
-}
+        .project-gallery-grid a:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Back Link */
+        .back-link-wrapper {
+            text-align: center;
+            margin-top: 32px;
+        }
+        
+        .back-link-wrapper .btn-primary {
+            gap: 12px; /* Add space for the arrow */
+        }
+
+        /* Magnific Popup arrow styles (Kept from your code) */
+        .mfp-arrow {
+            color: #fff; 
+            font-size: 2rem; 
+            line-height: 50px;
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.7); 
+            border-radius: 50%; 
+            top: 50%;
+            transform: translateY(-50%);
+            transition: background 0.3s ease;
+        }
+
+        .mfp-arrow-left {
+            left: 10px; /* Position inside viewport */
+        }
+
+        .mfp-arrow-right {
+            right: 10px; /* Position inside viewport */
+        }
+        .mfp-container {
+             padding: 0 40px; /* Add padding so arrows don't overlap content */
+        }
+
     </style>
+</head>
+<body>
+    
+    <header id="header">
+        <div class="container">
+            <a href="index.html" class="logo"> <img src="Gemini_Generated_Image_q1isxrq1isxrq1is-Photoroom.png" alt="Zahra Logo">
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#team">Team</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="index.html#home">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#team">Team</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="project-detail-section">
+            <div class="container">
+                
+                <div class="section-header scroll-animate visible">
+                    <h2>MULTI GYM</h2>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="project-overview-grid scroll-animate visible">
+                     <div class="project-image">
+                        <img src="GYM/GYM 8.png" alt="Main Screenshot of Gym Project">
+                     </div>
+                     <div class="project-description">
+                        <h3>Project Overview</h3>
+                        <p>A 3D visualization of a compact and versatile multi-gym station, designed to showcase how it offers comprehensive strength, cardio, and flexibility exercises in a minimal footprint. The render focuses on materials, functionality, and spatial arrangement.</p>
+                     </div>
+                </div>
+
+                <div class="section-header scroll-animate visible" style="margin-top: 64px;">
+                    <h3>Image Gallery</h3>
+                    <div class="divider"></div>
+                </div>
+
+                <div class="gallery project-gallery-grid scroll-animate visible">
+                    <a href="GYM/GYM 1.png" class="gallery-item">
+                        <img src="GYM/GYM 1.png" alt="Gym Angle 1">
+                    </a>
+                    <a href="GYM/GYM 2.png" class="gallery-item">
+                        <img src="GYM/GYM 2.png" alt="Gym Angle 2">
+                    </a>
+                    <a href="GYM/GYM 3.png" class="gallery-item">
+                        <img src="GYM/GYM 3.png" alt="Gym Angle 3">
+                    </a>
+                    <a href="GYM/GYM 10.png" class="gallery-item">
+                        <img src="GYM/GYM 10.png" alt="Gym Angle 4">
+                    </a>
+                    <a href="GYM/GYM 4.png" class="gallery-item">
+                        <img src="GYM/GYM 4.png" alt="Gym Angle 5">
+                    </a>
+                    <a href="GYM/GYM 5.png" class="gallery-item">
+                        <img src="GYM/GYM 5.png" alt="Gym Angle 6">
+                    </a>
+                    <a href="GYM/GYM 6.png" class="gallery-item">
+                        <img src="GYM/GYM 6.png" alt="Gym Angle 7">
+                    </a>
+                    <a href="GYM/GYM 7.png" class="gallery-item">
+                        <img src="GYM/GYM 7.png" alt="Gym Angle 8">
+                    </a>
+                    <a href="GYM/GYM 9.png" class="gallery-item">
+                        <img src="GYM/GYM 9.png" alt="Gym Angle 9">
+                    </a>
+                    </div> 
+
+                <div class="back-link-wrapper scroll-animate visible">
+                    <a href="index.html#projects" class="btn-primary">← Back to Projects</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-brand">Zahra Interiors</h3>
+                    <p>Zahra Interiors crafts elegant, functional spaces with bespoke designs tailored to your style and needs.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#team">Team</a></li>
+                        <li><a href="index.html#projects">Projects</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li>Bypass Road, Puttur - 574201</li>
+                        <li>Karnataka, India</li>
+                        <li>+91 88676 75217</li>
+                        <li>Zahrainteriord@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for design inspiration and updates</p>
+                    <form id="newsletterForm" class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Zahra Interiors. All rights reserved. Design brilliance by JVR.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/zahra_interiors_?igsh=ejE0emt1b3NuYzA0" target="_blank">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/918867675217" target="_blank">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                    </a>
+                    <a href="mailto:Zahrainteriord@gmail.com">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    
+    <script src="app.js"></script>
+
     <script>
         $(document).ready(function() {
             $('.gallery').magnificPopup({
-                delegate: 'a', // child items selector, by clicking on it popup will open
+                delegate: 'a', // child items selector
                 type: 'image',
                 gallery: {
-                    enabled: true, // enables gallery mode
-                    navigateByImgClick: true, // allows navigation by clicking the image
-                    arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup for arrows
-                    tPrev: 'Previous', // title for left button
-                    tNext: 'Next', // title for right button
+                    enabled: true, 
+                    navigateByImgClick: true,
+                    arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', 
+                    tPrev: 'Previous',
+                    tNext: 'Next',
                 }
             });
         });
     </script>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>MULTI GYM</h1>
-        </div>
-
-        <div class="project-details">
-            <img src="GYM/GYM 8.png" alt="Main Screenshot of Project 1">
-            <h2>Project Overview</h2>
-            <p>A versatile fitness station offering strength, cardio, and flexibility exercises 
-                in one compact setup.</p>
-        </div>
-
-        <div class="gallery">
-            <a href="GYM/GYM 1.png" class="gallery-item">
-                <img src="GYM/GYM 1.png" alt="Detailed Screenshot 1">
-            </a>
-            <a href="GYM/GYM 2.png" class="gallery-item">
-                <img src="GYM/GYM 2.png" alt="Detailed Screenshot 2">
-            </a>
-            <a href="GYM/GYM 3.png" class="gallery-item">
-                <img src="GYM/GYM 3.png" alt="Detailed Screenshot 3">
-            </a>
-            <a href="GYM/GYM 10.png" class="gallery-item">
-                <img src="GYM/GYM 10.png" alt="Detailed Screenshot 3">
-            </a>
-            <a href="GYM/GYM 4.png" class="gallery-item">
-                <img src="GYM/GYM 4.png" alt="Detailed Screenshot 3">
-            </a>
-            <a href="GYM/GYM 5.png" class="gallery-item">
-                <img src="GYM/GYM 5.png" alt="Detailed Screenshot 3">
-            </a>
-            <a href="GYM/GYM 6.png" class="gallery-item">
-                <img src="GYM/GYM 6.png" alt="Detailed Screenshot 3">
-            </a>
-            <a href="GYM/GYM 7.png" class="gallery-item">
-                <img src="GYM/GYM 7.png" alt="Detailed Screenshot 3">
-            </a>
-            <a href="GYM/GYM 9.png" class="gallery-item">
-                <img src="GYM/GYM 9.png" alt="Detailed Screenshot 3">
-            </a>
-            <!-- Add more images as needed -->
-        </div>
-        
-
-        <div class="back-link">
-            <a href="index.html">Back to Projects</a>
-        </div>
-    </div>
 </body>
 </html>

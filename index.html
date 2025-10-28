@@ -1,322 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zahra Interiors - ZAHRA</title>
-
-    <!--font awesome-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-    />
-
-    <!--bootstrap-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
-    />
-
-    <!--magnific popup-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
-    />
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script type="text/javascript">
-  (function(){
-    emailjs.init("YOUR_USER_ID");
-  })();
-</script>
-
-
-    <!--css file-->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- header section starts  -->
-    <header class="header fixed-top">
-      <a href="#" class="logo">
-        <img src="zahralogo.jpeg" alt="Zahra Logo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zahra Interiors - Luxury Interior Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <a href="#" class="logo">
+        <img src="Gemini_Generated_Image_q1isxrq1isxrq1is-Photoroom.png" alt="Zahra Logo">
       </a>
-
-      <nav>
-        <ul>
-          <li><a href="#home">home</a></li>
-          <li><a href="#about">about</a></li>
-          <li><a href="#service">services</a></li>
-          <li><a href="#project">projects</a></li>
-          <li><a href="#contact">contact</a></li>
-          <li><a href="https://www.instagram.com/zahra_interiors_?igsh=ejE0emt1b3NuYzA0" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-        </ul>
-      </nav>
-
-      <div class="fas fa-bars"></div>
+            <nav class="desktop-nav">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#team">Team</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#team">Team</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
-    <!-- header section ends -->
 
-    <!-- home section starts  -->
-    <section id="home" class="home container-fluid p-0">
-      <div class="row hero">
-        <div class="col pl-3 ml-sm-5 p-0">
-          <h1 class="text1">Transform your <br>space with us</h1>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-decorations">
+            <div class="decoration-circle circle-1"></div>
+            <div class="decoration-circle circle-2 float"></div>
         </div>
-      </div>
-      
-    </section>
-    <!-- home section ends -->
-
-    <!-- about section starts  -->
-    <section id="about" class="about container">
-      <h1 class="heading">about us</h1>
-
-      <div class="row align-items-center">
-        
-
-        <div class="col-md-6 info">
-          <h2>Since 2022</h2>
-          <p>
-            We offer a range of services including Residential Fit-out , 
-            Commercial Fit-out , Design Development & Home Styling . 
-            Our team of skilled professionals are dedicated to delivering high-quality 
-            workmanship and excellent customer service, ensuring that each project is 
-            completed to the highest standards.
-          </p>
-         
-          <div class="icons">
-            <a href="https://www.instagram.com/zahra_interiors_?igsh=ejE0emt1b3NuYzA0" class="fab fa-instagram" target="_blank" rel="noopener noreferrer"></a>
-            <a href="https://wa.me/918867675217" class="fab fa-whatsapp" target="_blank" rel="noopener noreferrer"></a>
-          </div>
+        <div class="container hero-content">
+            <h1 class="fade-in-down">Transform Your Space With Us</h1>
+            <p class="fade-in-up delay-1">Creating timeless interiors that reflect your unique story. Experience luxury, elegance, and sophistication in every detail.</p>
+            <button class="btn-primary scale-in delay-2" onclick="scrollToSection('contact')">Build with Us <span class="arrow">→</span></button>
         </div>
-      </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse"></div>
+        </div>
     </section>
-    <!-- about section ends -->
-     <!-- Team section starts -->
-<section id="team" class="team container">
-  <h1 class="heading">Meet Our Team</h1>
 
-  <div class="row">
-    <!-- Team member 1 -->
-    <div class="col-md-4">
-      <div class="team-member">
-        <img src="managing director.jpg" alt="Team Member 1" class="team-img" />
-        <h3>ABBAS NATURAL</h3>
-        <h4>Managing Partner</h4>
-      </div>
-    </div>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image scroll-animate">
+                    <img src="https://images.unsplash.com/photo-1603687057020-55470a6fbf45?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxlbGVnYW50JTIwaW50ZXJpb3IlMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzYxNTYzNjQ0fDA&ixlib=rb-4.1.0&q=85" alt="Elegant Interior">
+                    <div class="image-decoration float"></div>
+                </div>
+                <div class="about-content scroll-animate">
+                    <h2>About Zahra Interiors</h2>
+                    <div class="divider"></div>
+                    <p>We offer a range of services including Residential Fit-out ,Commercial Fit-out ,Design Development & Home Styling.</p>
+                    <p>Our team of skilled professionals are dedicated to delivering high-quality workmanship and excellent customer service, ensuring that each project is completed to the highest standards.</p>
+                    <p>With meticulous attention to detail, innovative design solutions, and a commitment to excellence, we craft spaces that are timeless, functional, and deeply personal.</p>
+                  </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Team member 2 -->
-    <div class="col-md-4">
-      <div class="team-member">
-        <img src="team-member2.jpeg" alt="Team Member 2" class="team-img" />
-        <h3>MAHAMMAD JASIR</h3>
-        <h5>B.sc ID&D</h5>
-        <h4>Architectural Designer</h4>
-
-      </div>
-    </div>
-
-    <!-- Team member 3 -->
-    <div class="col-md-4">
-      <div class="team-member">
-        <img src="team-member3.jpeg" alt="Team Member 3" class="team-img" />
-        <h3>ABDUL NISAR</h3>
-        <h5>B.sc ID&D</h5>
-        <h4>Interior Designer</h4>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Team member 4 -->
-<div class="col-md-4">
-  <div class="team-member">
-    <img src="azar.jpg" alt="Team Member 4" class="team-img" />
-    <h3>AZARUDDIN</h3>
-    <h5>B.sc ID&D</h5>
-    <h4>Site Engineer</h4>
-  </div>
-</div>
-</div>
-<!-- Team section ends -->
-
-
-    <!-- service section starts  -->
-    <section id="service" class="service">
-      <h1 class="heading">our services</h1>
-
-      <div class="box-container mx-auto">
-        <div class="box">
-          <p>
-            <strong>Consultation</strong> <br>
-            Once we receive your request, our team inspects 
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <h2>Our Services</h2>
+                <div class="divider"></div>
+                <p>Comprehensive interior design solutions tailored to bring your vision to life</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card scroll-animate-scale stagger-1">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Consultation</h3>
+                    <p>Once we receive your request, our team inspects 
             your site to understand your requirements and 
-            assess the scope of the project.
-            
-          </p>
-        </div>
-
-        <div class="box">
-          <p>
-            <strong>Design</strong> <br>
-            After the site inspection, our team designs, details, 
+            assess the scope of the project.</p>
+                </div>
+                <div class="service-card scroll-animate-scale stagger-2">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </div>
+                    <h3>Design</h3>
+                    <p>After the site inspection, our team designs, details, 
             and drafts your project. This includes a 2D sketch or a 3D video walkthrough, 
-            the full scope, and the cost of the project.
-          </p>
+            the full scope, and the cost of the project.</p>
+                </div>
+                <div class="service-card scroll-animate-scale stagger-3">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3>Execution</h3>
+                    <p>Once you approve the design, our operations team gets
+             to work and turns your dream into reality.</p>
+                </div>
+                <div class="service-card scroll-animate-scale stagger-4">
+                    <div class="service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14"></path>
+                            <path d="M5 12a7 7 0 0 1 7-7"></path>
+                            <path d="M5 12a7 7 0 0 0 7 7"></path>
+                            <path d="M12 5a7 7 0 0 1 7 7"></path>
+                            <path d="M12 5a7 7 0 0 0-7 7"></path>
+                        </svg>
+                    </div>
+                    <h3>Quality Check & Handover</h3>
+    <p>After completion, our experts perform a final quality inspection
+       to ensure every detail meets the highest standards before handing
+       over the project to you.</p>
+                </div>
+            </div>
         </div>
-
-        <div class="box">
-          
-          <p>
-            <strong>Execution</strong> <br>
-            Once you approve the design, our operations team gets
-             to work and turns your dream into reality.
-          </p>
-        </div>       
-      </div>
     </section>
-    <!-- service section ends -->
 
-    <!-- Project section starts -->
-<section id="project" class="project">
-  <div class="heading">Projects</div>
-  <h1>Great things we've done</h1>
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <h2>Meet Our Team</h2>
+                <div class="divider"></div>
+                <p>Passionate designers and architects dedicated to creating exceptional spaces</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card scroll-animate stagger-1">
+                    <div class="team-image">
+                        <img src="managingdirector.jpg" alt="ABBAS NATURAL">
+                        <div class="team-overlay"></div>
+                    </div>
+                    <div class="team-info">
+                        <h3>ABBAS NATURAL</h3>
+                        <p>Managing Partner</p>
+                    </div>
+                </div>
+                <div class="team-card scroll-animate stagger-2">
+                    <div class="team-image">
+                        <img src="jasir1.jpg" alt="MAHAMMAD JASIR">
+                        <div class="team-overlay"></div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Mahammad Jasir</h3>
+                        <p>Lead Architect</p>
+                    </div>
+                </div>
+                <div class="team-card scroll-animate stagger-3">
+                    <div class="team-image">
+                        <img src="nisar1.jpg" alt="Abdul Nisar">
+                        <div class="team-overlay"></div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Abdul Nisar</h3>
+                        <p>Interior Designer</p>
+                    </div>
+                </div>
+                <div class="team-card scroll-animate stagger-4">
+                    <div class="team-image">
+                        <img src="Azar copy.jpg" alt="Azaruddin">
+                        <div class="team-overlay"></div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Azaruddin</h3>
+                        <p>Site Engineer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="box-container mx-auto">
-    <div class="box">
-      <a href="project1.html">View Projects</a>
-          <img src="BANK/IMAGE 01.png" alt="Project 1" />
-  </div>
-    <div class="box">
-      <a href="project2.html">View Projects</a> <!-- Link to the full project page -->
-        <img src="RENDER/01.png" alt="Project 2" />
+    <!-- Projects Section -->
+ <section id="projects" class="projects">
+    <div class="container">
+        <div class="section-header scroll-animate">
+            <h2>Our Projects</h2>
+            <div class="divider"></div>
+            <p>A showcase of our finest work and creative excellence</p>
+        </div>
+        <div class="projects-grid">
+
+            <a href="project1.html" class="project-card scroll-animate-scale stagger-1">
+                <img src="BANK/IMAGE 01.png" alt="Bank Interior Design">
+                <div class="project-overlay">
+                    <h3>Bank Interior</h3>
+                    <p>Commercial Design</p>
+                </div>
+            </a>
+
+            <a href="project2.html" class="project-card scroll-animate-scale stagger-2">
+                <img src="RENDER/01.png" alt="Luxury Kitchen Design">
+                <div class="project-overlay">
+                    <h3>Luxury Kitchen</h3>
+                    <p>Residential Design</p>
+                </div>
+            </a>
+
+            <a href="project3.html" class="project-card scroll-animate-scale stagger-3">
+                <img src="SHOE FACTORY/Image11.png" alt="Modern Shoe Store">
+                <div class="project-overlay">
+                    <h3>Shoe Store</h3>
+                    <p>Commercial Fit-out</p>
+                </div>
+            </a>
+
+            <a href="project4.html" class="project-card scroll-animate-scale stagger-4">
+                <img src="GYM/GYM 8.png" alt="Multi Gym Space">
+                <div class="project-overlay">
+                    <h3>Multi Gym</h3>
+                    <p>Commercial Design</p>
+                </div>
+            </a>
+
+            <a href="project5.html" class="project-card scroll-animate-scale stagger-5">
+                <img src="BEDROOM 3/R 1.png" alt="Luxury Bedroom Design">
+                <div class="project-overlay">
+                    <h3>Luxury Bedroom</h3>
+                    <p>Residential Design</p>
+                </div>
+            </a>
+
+            <a href="project6.html" class="project-card scroll-animate-scale stagger-6">
+                <img src="CAFE/Image13.png" alt="Modern Cafe Design">
+                <div class="project-overlay">
+                    <h3>Cafe Interior</h3>
+                    <p>Commercial Fit-out</p>
+                </div>
+            </a>
+
+        </div>
     </div>
-
-    <div class="box">
-      <a href="project3.html">View Projects</a> <!-- Link to the full project page -->
-        <img src="SHOE FACTORY/Image11.png" alt="Project 3" />
-        
-    </div>
-
-    <div class="box">
-      <a href="project4.html">View Projects</a> <!-- Link to the full project page -->
-        <img src="GYM/GYM 8.png" alt="Project 4" />
-       
-    </div>
-
-    <div class="box">
-      <a href="project5.html">View Projects</a> <!-- Link to the full project page -->
-        <img src="BEDROOM 3/R 1.png" alt="Project 5" />
-        
-    </div>
-
-    <div class="box">
-      <a href="project6.html">View Projects</a> <!-- Link to the full project page -->
-        <img src="CAFE/Image13.png" alt="Project 6" />
-        
-    </div>
-  </div>
 </section>
-<!-- Project section ends -->
 
-
-    <!-- contact section starts  -->
+    <!-- Contact Section -->
     <section id="contact" class="contact">
-      <h1 class="heading">Reach us</h1>
-
-      <div class="contact-box-container mx-auto">
-        <div class="contact-box">
-          <a href="https://www.google.com/maps/place/12.7639610,75.1950300" target="_blank" rel="noopener noreferrer">
-              <i class="fas fa-map-marker-alt"></i>
-              <h3>Bypass Road, Puttur - 574201</h3>
-          </a>
-      </div>
-      
-        <div class="contact-box">
-          <i class="fas fa-envelope"></i>
-          <h3><a href="mailto:Zahrainteriord@gmail.com">Zahrainteriord@gmail.com</a></h3>
+        <div class="container">
+            <div class="section-header scroll-animate">
+                <h2>Get In Touch</h2>
+                <div class="divider"></div>
+                <p>Let's start creating your dream space together</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-form-wrapper scroll-animate-scale">
+                    <form id="contactForm" class="contact-form">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="tel" name="phone" placeholder="Your Phone" required>
+                        <textarea name="message" placeholder="Tell us about your project..." rows="6" required></textarea>
+                        <button type="button" class="btn-primary" onclick="window.location.href='mailto:Zahrainteriord@gmail.com'">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info scroll-animate">
+                    <div class="contact-item stagger-1">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Visit Us</h3>
+                            <p>Bypass Road, Puttur - 574201</p>
+                        </div>
+                    </div>
+                    <div class="contact-item stagger-2">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Call Us</h3>
+                            <p>+91 88676 75217</p>
+                        </div>
+                    </div>
+                    <div class="contact-item stagger-3">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Email Us</h3>
+                            <p>Zahrainteriord@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/zahra_interiors_?igsh=ejE0emt1b3NuYzA0" target="_blank" class="social-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                                </svg>
+                            </a>
+                            <a href="https://wa.me/918867675217" target="_blank" class="social-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                </svg>
+                            </a>
+                            <a href="https://www.google.com/maps/place/12.7639610,75.1950300" target="_blank" class="social-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 10c0 6-9 13-9 13S3 16 3 10a9 9 0 1 1 18 0z"></path>
+        <circle cx="12" cy="10" r="3"></circle>
+      </svg>
+    </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-
-        <div class="contact-box">
-          <a href="https://wa.me/918867675217" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-phone"></i>
-            <h3>+91 88676 75217</h3>
-          </a>
-        </div>
-      </div>
-
-      <div class="form-container mx-auto">
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-          <div class="inputBox">
-            <input type="text" name="name" placeholder="full name" required />
-            <input type="text" name="phone" placeholder="phone number" required />
-          </div>
-          <input type="email" name="email" placeholder="email address" required />
-          <textarea
-            name="message"
-            id=""
-            cols="30"
-            rows="10"
-            placeholder="message"
-            required
-          ></textarea>
-          <input type="submit" value="send" />
-        </form>
-      </div>
-      
     </section>
-    <!-- contact section ends -->
 
-    <!-- footer section starts  -->
-    <section class="container-fluid footer">
-      <div class="row">
-        <div class="col-md-3">
-          <h2>Zahra Interiors</h2>
-          <p>
-            Zahra Interiors specializes in creating elegant and functional spaces. 
-        Our expert team delivers bespoke design solutions tailored to your 
-        style and needs, whether for residential or commercial projects.
-          </p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-brand">Zahra Interiors</h3>
+                    <p>Zahra Interiors crafts elegant, functional spaces with bespoke designs tailored to your style and needs.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li>Bypass Road, Puttur - 574201</li>
+                        <li>Karnataka, India</li>
+                        <li>+91 88676 75217</li>
+                        <li>Zahrainteriord@gmail.com</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe for design inspiration and updates</p>
+                    <form id="newsletterForm" class="newsletter-form">
+                        <input type="email" placeholder="Your email" required>
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Zahra Interiors. All rights reserved. Design brilliance by JVR.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/zahra_interiors_?igsh=ejE0emt1b3NuYzA0" target="_blank">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/918867675217" target="_blank">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                        </svg>
+                    </a>
+                    <a href="mailto:Zahrainteriord@gmail.com">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
+    </footer>
 
-        <div class="col-md-3">
-          <h2>we are in</h2>
-          <div class="list">
-            <a href="#">Bypass Road, Puttur</a>
-            <a href="#">D.K</a>
-          </div>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxCategory"></p>
+                <p id="lightboxDescription"></p>
+            </div>
         </div>
+    </div>
 
-        <div class="col-md-3">
-          <h2>follow us</h2>
-          <div class="list">
-            <a href="https://www.instagram.com/zahra_interiors_?igsh=ejE0emt1b3NuYzA0" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://wa.me/918867675217" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          </div>
-        </div>
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
 
-        <div class="col-md-3 text-center text-md-left letter">
-          <h2>newsletter</h2>
-          <p>subscribe for latest updates</p>
-          <input type="email" placeholder="enter your email" />
-          <input type="submit" placeholder="subscribe" />
-        </div>
-      </div>
-
-      <h1 class="credit">
-        Design brilliance by <span>JVR</span> | <a href="https://wa.me/919611678864" class="fab fa-whatsapp" target="_blank" rel="noopener noreferrer"></a>
-      </h1>
-    </section>
-    <!-- footer section ends -->
-
-    <!--jquery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
-    <!--magnific popup-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-
-    <!--js file-->
     <script src="app.js"></script>
-  </body>
+</body>
 </html>
